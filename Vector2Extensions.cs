@@ -13,11 +13,11 @@ namespace WhereAreYouGoing
         /// <summary>
         /// Converts a list of <see cref="Vector2i"/> objects to a list of <see cref="System.Numerics.Vector2"/> objects.
         /// </summary>
-        /// <param name="vector2iList">The list of <see cref="Vector2i"/> objects to convert.</param>
+        /// <param name="vector2IList">The list of <see cref="Vector2i"/> objects to convert.</param>
         /// <returns>A list of <see cref="System.Numerics.Vector2"/> objects.</returns>
-        public static List<Vector2> ConvertToVector2List(this IList<Vector2i> vector2iList)
+        public static List<Vector2> ConvertToVector2List(this IList<Vector2i> vector2IList)
         {
-            return vector2iList.Select(v => new Vector2(v.X, v.Y)).ToList();
+            return vector2IList.Select(v => new Vector2(v.X, v.Y)).ToList();
         }
 
         /// <summary>
