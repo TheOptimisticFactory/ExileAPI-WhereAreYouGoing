@@ -164,6 +164,13 @@ public class WhereAreYouGoing : BaseSettingsPlugin<WhereAreYouGoingSettings>
         //Any Imgui or Graphics calls go here. This is called after Tick
         if (!Settings.Enable.Value || !GameController.InGame) return;
 
+        var ingameUi = GameController.Game.IngameState.IngameUi;
+        if (!Settings.IgnoreFullscreenPanels && ingameUi.FullscreenPanels.Any(x => x.IsVisible))
+            return;
+
+        if (!Settings.IgnoreLargePanels && ingameUi.LargePanels.Any(x => x.IsVisible))
+            return;
+
         var player = GameController?.Player;
 
         player.TryGetComponent<Positioned>(out var playerPositioned);

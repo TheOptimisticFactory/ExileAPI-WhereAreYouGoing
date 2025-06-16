@@ -21,8 +21,8 @@ namespace WhereAreYouGoing
 
         //Mandatory setting to allow enabling/disabling your plugin
         public ToggleNode Enable { get; set; } = new ToggleNode(false);
-
-        public ToggleNode MultiThreading { get; set; } = new ToggleNode(false);
+        public ToggleNode IgnoreFullscreenPanels { get; set; } = new ToggleNode(false);
+        public ToggleNode IgnoreLargePanels { get; set; } = new ToggleNode(false);
         public RangeNode<int> MaxCircleDrawDistance { get; set; } = new RangeNode<int>(120, 0, 200);
         public WAYGConfig NormalMonster { get; set; } = new WAYGConfig()
         {
