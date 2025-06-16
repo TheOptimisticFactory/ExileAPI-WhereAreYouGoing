@@ -23,6 +23,7 @@ namespace WhereAreYouGoing
         public ToggleNode Enable { get; set; } = new ToggleNode(false);
         public ToggleNode IgnoreFullscreenPanels { get; set; } = new ToggleNode(false);
         public ToggleNode IgnoreLargePanels { get; set; } = new ToggleNode(false);
+        public ToggleNode EnableInPeacefulAreas { get; set; } = new ToggleNode(false);
         public RangeNode<int> MaxCircleDrawDistance { get; set; } = new RangeNode<int>(120, 0, 200);
         public WAYGConfig NormalMonster { get; set; } = new WAYGConfig()
         {

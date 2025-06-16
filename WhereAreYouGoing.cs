@@ -164,6 +164,9 @@ public class WhereAreYouGoing : BaseSettingsPlugin<WhereAreYouGoingSettings>
         //Any Imgui or Graphics calls go here. This is called after Tick
         if (!Settings.Enable.Value || !GameController.InGame) return;
 
+        if (!Settings.EnableInPeacefulAreas && GameController.Area.CurrentArea.IsPeaceful)
+            return;
+
         var ingameUi = GameController.Game.IngameState.IngameUi;
         if (!Settings.IgnoreFullscreenPanels && ingameUi.FullscreenPanels.Any(x => x.IsVisible))
             return;
